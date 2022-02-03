@@ -1,25 +1,7 @@
 "use strick";
 
-let obj = {
-  name: "Kale",
-  age: 112,
-  job: "Bos",
-  [Symbol.iterator]() {
-    return {
-      current: this.name,
-      last: this.job,
-      next() {
-        if (this.current <= this.last) {
-          return {
-            done: this.current,
-            value: this.current++,
-          };
-        } else {
-          return {
-            done: true,
-          };
-        }
-      },
-    };
-  },
-};
+const mas = [1, 3, 4, 5];
+
+let a = "Hello";
+
+console.log(a);
