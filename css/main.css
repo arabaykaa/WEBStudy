@@ -10,14 +10,31 @@ body {
 .mainHeader {
   width: 100%;
   height: 80px;
-  background-color: #00820d;
+  background-color: #8d6d04;
   font-family: Montserrat, Arial;
   color: #01010a;
 }
 
 .mainInfoPart {
-  background-color: #939694;
   width: 100%;
   height: 100%;
+}
+
+#grid {
+  float: left;
+  width: 100%;
+}
+
+#grid > div {
+  float: left;
+  background: burlywood;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  height: 150px;
+  width: 10.75%;
+}
+
+#grid > div:nth-child(8n) {
+  margin-right: 0;
 }
 /*# sourceMappingURL=main.css.map */
