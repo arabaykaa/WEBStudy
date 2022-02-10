@@ -28,13 +28,43 @@ body {
 #grid > div {
   float: left;
   background: burlywood;
-  margin-right: 2%;
   margin-bottom: 2%;
   height: 150px;
-  width: 10.75%;
+  width: 23.5%;
+  margin-right: 2%;
 }
 
-#grid > div:nth-child(8n) {
+#grid > div:nth-child(4n) {
   margin-right: 0;
+}
+
+.someClass-24 {
+  width: 74px;
+  height: 74px;
+}
+
+.someClass-25 {
+  width: 75px;
+  height: 75px;
+}
+
+.someClass-26 {
+  width: 76px;
+  height: 76px;
+}
+
+.someClass-27 {
+  width: 77px;
+  height: 77px;
+}
+
+.someClass-28 {
+  width: 78px;
+  height: 78px;
+}
+
+.someClass-29 {
+  width: 79px;
+  height: 79px;
 }
 /*# sourceMappingURL=main.css.map */

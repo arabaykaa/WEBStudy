@@ -2,10 +2,16 @@
 @mixin grid($collsNum, $margin) {
   float: left;
   background: burlywood;
-  margin-right: $margin;
   margin-bottom: $margin;
   height: 150px;
-  width: ((100% - (($collsNum - 1) * $margin)) / $collsNum);
+
+  @if ($collsNum >= 5) {
+    width: 100%;
+    margin-right: 0;
+  } @else {
+    width: ((100% - (($collsNum - 1) * $margin)) / $collsNum);
+    margin-right: $margin;
+  }
 
   &:nth-child(#{$collsNum}n) {
     margin-right: 0;
