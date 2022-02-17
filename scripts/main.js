@@ -30,9 +30,34 @@
 //     alert("Yong!")
 // }
 
-function count(){
-    alert("Hi");
+// function count(){
+//     alert("Hi");
 
-    count.counter()++;
+//     count.counter()++;
+// }
+
+//SetTimeout/SetInterval 16.02.2022
+// function printNumber(start, end) {
+//   let from = start;
+
+//   function go() {
+//     console.log(from);
+//     if (from == end) {
+//       clearInterval(timeout);
+//     }
+//     from++;
+//   }
+
+//   go();
+//   let timeout = setInterval(go, 1000);
+// }
+
+// printNumber(2, 6);
+let i = 0;
+
+setTimeout(() => alert(i), 50); // ?
+
+// предположим, что время выполнения этой функции >100 мс
+for(let j = 0; j < 100000000; j++) {
+  i++;
 }
-
