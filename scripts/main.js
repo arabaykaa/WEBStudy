@@ -53,11 +53,18 @@
 // }
 
 // printNumber(2, 6);
-let i = 0;
+// let i = 0;
 
-setTimeout(() => alert(i), 50); // ?
+// setTimeout(() => alert(i), 50); // ?
 
-// предположим, что время выполнения этой функции >100 мс
-for(let j = 0; j < 100000000; j++) {
-  i++;
+// // предположим, что время выполнения этой функции >100 мс
+// for(let j = 0; j < 100000000; j++) {
+//   i++;
+// }
+
+//jaka's comments//
+let num = 2;
+function square(money) {
+  return money + 2;
 }
+console.log(square(num));
