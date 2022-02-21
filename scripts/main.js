@@ -1,5 +1,37 @@
 "use strick";
 
+//Apply, CAll, decorators 18.02.2022==================================
+let worker = {
+  someMethod() {
+    return 1;
+  },
+
+  slow(x) {
+    console.log(`Called with ${x}`);
+    return x * this.someMethod();
+  },
+};
+
+function cashingDecorator(func) {
+  let casheMap = new Map();
+
+  return function (x) {
+    if (casheMap.has(x)) {
+      return casheMap.get(x);
+    }
+
+    let res = func.call(this, x);
+
+    casheMap.set(x, res);
+    return res;
+  };
+}
+
+worker.slow = cashingDecorator(worker.slow);
+
+console.log(worker.slow(1));
+console.log(worker.slow(1));
+
 // function tesArg() {
 //   console.log(arguments.length);
 //   console.log(arguments[0]);
@@ -12,7 +44,7 @@
 // let mas1 = [3, 14, 5, 23, 2];
 // let mas2 = [31, 12, 5, 3, 0];
 
-//Замыкание
+//Замыкание ==================================
 // function squarM(m) {
 //   return function (num) {
 //     alert(num ** m);
@@ -23,7 +55,7 @@
 
 // addOne(2);
 
-//Глобальные объекты 10.02.2022
+//Глобальные объекты 10.02.2022==================================
 // if(!window.Promise){
 //     alert("Old!");
 // }else{
@@ -36,7 +68,7 @@
 //     count.counter()++;
 // }
 
-//SetTimeout/SetInterval 16.02.2022
+//SetTimeout/SetInterval 16.02.2022==================================
 // function printNumber(start, end) {
 //   let from = start;
 
@@ -53,11 +85,10 @@
 // }
 
 // printNumber(2, 6);
-let i = 0;
+// let i = 0;
 
-setTimeout(() => alert(i), 50); // ?
+// setTimeout(() => alert(i), 50); // ?
 
-// предположим, что время выполнения этой функции >100 мс
-for(let j = 0; j < 100000000; j++) {
-  i++;
-}
+// for(let j = 0; j < 100000000; j++) {
+//   i++;
+// }
